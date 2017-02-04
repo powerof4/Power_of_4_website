@@ -1,0 +1,19 @@
+.navbar{
+  height: 75px;
+  background-color: #000000;
+  /*opacity: 0.5;*/
+}
+.navbar-brand{
+  height: 80px;
+  width: 100px;
+  margin-left: 100px;
+}
+.navbar-nav{
+  margin-right: 100px;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: #ffffff;
+}
+.navbar-light .navbar-nav .active>.nav-link{
+  color: #ffffff;
+}
