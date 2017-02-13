@@ -17,3 +17,11 @@
 .navbar-light .navbar-nav .active>.nav-link{
   color: #ffffff;
 }
+
+/* CSS for Portfolio Page */
+.portfolio_name{
+  position: absolute;
+  margin-top: 32px;
+  font-family: cursive;
+  font-size: 50pt;
+}
