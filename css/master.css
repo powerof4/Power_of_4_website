@@ -27,5 +27,13 @@
 }
 
 .our_projects{
-  margin: auto; 
+  margin: auto;
+}
+
+/* Footer */
+.footer-copyright{
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px; 
 }
