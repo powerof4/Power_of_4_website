@@ -37,15 +37,29 @@ body {
 
 /* CSS for Portfolio Page */
 .portfolio_name{
-  position: absolute;
-  margin-top: 32px;
   font-family: cursive;
-  font-size: 50pt;
+  font-size: 7em;
+  color: #e5e5e5;
+  background-color: #000000;
+  opacity: 0.5;
+  width: 34%;
+  margin-left: 33%;
+  border-radius: 10px;
+  margin-top: 5%; 
 }
 
 .our_projects{
   margin: auto;
 }
+
+.project_img{
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+}
+  .project_text{
+    text-align: center;
+  }
 
 /* Footer */
 .footer-copyright{
