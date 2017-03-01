@@ -31,6 +31,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
+  overflow: auto;
 
 }
 
@@ -69,7 +70,7 @@ body {
 
 .cover {
   padding: 0 1.5rem;
-  margin-top: 27%
+  margin-top: 27%;
 }
 
 @media (min-width: 40em) {
@@ -87,4 +88,28 @@ body {
   }
 }
 
->>>>>>> 438c7fe7768a217009d99c28f308680dd992d222
+/***********
+Form
+************/
+
+.form-position{
+  width: 70%;
+  padding-left: 30%;
+}
+
+.form-background{
+  color: #fff;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  background-color: #222;
+  border: 2px solid #111;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+.contact-header{
+  font-size: 30px;
+  padding-bottom: 3%;
+}
