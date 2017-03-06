@@ -36,6 +36,13 @@ body {
 }
 
 /* CSS for Portfolio Page */
+.placeholder_projects{
+  font-size: 4em;
+  background: linear-gradient(to right, #D3CDD2, #AC669D, #DB9DCE, #F87DDE, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 35px;
+}
 .portfolio_name{
   font-family: cursive;
   font-size: 7em;
@@ -45,7 +52,7 @@ body {
   width: 34%;
   margin-left: 33%;
   border-radius: 10px;
-  margin-top: 5%; 
+  margin-top: 5%;
 }
 
 .our_projects{
