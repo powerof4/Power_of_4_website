@@ -18,6 +18,13 @@
       if (empty($data)) {
         $errors[] = "The " . $field . " is required.";
       }
+
+      // If email is invalid, add to errors
+      if ($field === 'email') {
+        if (!filter_var($data, FILTER_VALIDATE_EMAIL)) {
+          $errors[] = $data . " is an invalid email.";
+        }
+      }
     }
     // If not errors, send email
       if(empty($errors)){
@@ -29,7 +36,7 @@
         // Connect to SMTP server
         $mail->Host = 'smtp.gmail.com';
         $mail->Username = 'powerof4devs@gmail.com';
-        $mail->Password = 'LadiesWhoCode';
+        $mail->Password = 'password'; // removed the password for our account
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
@@ -47,7 +54,7 @@
         $mail->AddAddress('powerof4devs@gmail.com', 'Power of 4');
 
         if ($mail->send()) {
-          $_SESSION['success'] = $success; 
+          $_SESSION['success'] = $success;
           header('Location: contact.php');
           die();
         }else{
@@ -63,7 +70,6 @@
   // Store errors in session variable to have access to it on contact.php page
   $_SESSION['errors'] = $errors;
   $_SESSION['fields'] = $fields;
-
 
   header("Location: contact.php");
  ?>
