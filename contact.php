@@ -75,12 +75,6 @@
               <label for="email" class= "col-form-label">Email</label>
               <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" <?php echo isset($fields['email']) ? 'value="' . $fields['email'] . ' " ' : '' ?>>
             </div>
-             <!-- Don't think this is needed since subject is sent via email.
-
-						 <div class="form-group row">
-              <label for="subject" class= "col-form-label">Subject</label>
-              <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-            </div> -->
             <div class="form-group row">
               <label for="message">Message</label>
               <textarea class="form-control" id="message" rows="5" name="message" <?php echo isset($fields['message']) ? $fields['message'] : '' ?>></textarea>
