@@ -4,6 +4,7 @@
   require_once 'php_mailer_lib/PHPMailerAutoload.php';
 
   $errors = [];
+  $success = "Your message has been successfully sent!";
 
   // Check to see if data has been submitted
   if (isset($_POST['your_name'], $_POST['email'], $_POST['message'])) {
@@ -46,6 +47,7 @@
         $mail->AddAddress('powerof4devs@gmail.com', 'Power of 4');
 
         if ($mail->send()) {
+          $_SESSION['success'] = $success; 
           header('Location: contact.php');
           die();
         }else{
@@ -61,6 +63,7 @@
   // Store errors in session variable to have access to it on contact.php page
   $_SESSION['errors'] = $errors;
   $_SESSION['fields'] = $fields;
+
 
   header("Location: contact.php");
  ?>

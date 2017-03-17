@@ -4,6 +4,7 @@
 	// if session errors is set, assign $errors to session errors otherwise set $errors to empty array
 	$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
 	$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
+	$success = isset($_SESSION['success']) ? $_SESSION['success'] : "";
  ?>
 
 <!DOCTYPE html>
@@ -49,6 +50,12 @@
 <div class="cover-container">
     <div class="inner cover">
       <div class ="container form-background">
+				<!-- If success is not empty, display success message. -->
+				<?php if(!empty($success)): ?>
+						<div class="container">
+							<p id="success_msg"><?php echo $success; ?></p>
+						</div>
+					<?php endif; ?>
         <p class="contact-header">We'd Love To Hear From You!</p>
 
 					<?php if(!empty($errors)): ?>
@@ -90,6 +97,6 @@
 <?php
 	// Unset session errors to remove info user may have put in there before
 	unset($_SESSION['errors']);
-
 	unset($_SESSION['fields']);
+	unset($_SESSION['success']);
  ?>

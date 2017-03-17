@@ -93,12 +93,7 @@ Form
   font-size: 30px;
   padding-bottom: 3%;
 }
-.text-danger{
-  color: red;
-}
-.alert-success{
-  color: green; 
-}
-.alert-danger{
-  color: orange;
+#success_msg{
+  color: #008000;
+  font-size: 20pt;
 }
