@@ -88,8 +88,19 @@ Form
   border-radius: 10px;
   opacity: 0.85;
 }
+.form_errors{
+  color: #FF0000;
+}
+.form_errors ul{
+  list-style-type: none;
+  font-size: 15pt;
+}
 
 .contact-header{
   font-size: 30px;
   padding-bottom: 3%;
+}
+#success_msg{
+  color: #008000;
+  font-size: 20pt;
 }
