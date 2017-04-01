@@ -34,6 +34,46 @@ body {
   overflow: auto;
 
 }
+
+/* CSS for Portfolio Page */
+.placeholder_projects{
+  font-size: 4em;
+  background: linear-gradient(to right, #D3CDD2, #AC669D, #DB9DCE, #F87DDE, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 35px;
+}
+.portfolio_name{
+  font-size: 7em;
+  color: #e5e5e5;
+  background-color: #000000;
+  opacity: 0.5;
+  width: 34%;
+  margin-left: 33%;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+.our_projects{
+  margin: auto;
+}
+
+.project_img{
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+}
+  .project_text{
+    text-align: center;
+  }
+
+/* Footer */
+.footer-copyright{
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
 body {
   color: #fff;
   text-align: center;
@@ -88,8 +128,20 @@ Form
   border-radius: 10px;
   opacity: 0.85;
 }
+.form_errors{
+  color: #FF0000;
+}
+.form_errors ul{
+  list-style-type: none;
+  font-size: 15pt;
+}
 
 .contact-header{
   font-size: 30px;
   padding-bottom: 3%;
+}
+
+#success_msg{
+  color: #008000;
+  font-size: 20pt;
 }
