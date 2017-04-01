@@ -1,0 +1,106 @@
+/***********
+Navbar
+************/
+
+.navbar{
+  opacity: 0.85;
+}
+.navbar-brand{
+  height: 85px;
+  width: 100px;
+  margin-left: 100px;
+}
+.navbar-nav{
+  margin-right: 100px;
+}
+
+/***********
+Cover
+************/
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  background-image: url("../images/cover.jpeg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  overflow: auto;
+
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.inner {
+  padding: 2rem;
+}
+
+.cover {
+  padding: 0 1.5rem;
+  margin-top: 27%;
+}
+
+@media (min-width: 40em) {
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  .cover-container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 62em) {
+  .cover-container {
+    width: 42rem;
+  }
+}
+
+/***********
+Form
+************/
+
+.form-position{
+  width: 70%;
+  padding-left: 30%;
+}
+
+.form-background{
+  color: #fff;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  background-color: #222;
+  border: 2px solid #111;
+  border-radius: 10px;
+  opacity: 0.85;
+}
+.form_errors{
+  color: #FF0000;
+}
+.form_errors ul{
+  list-style-type: none;
+  font-size: 15pt;
+}
+
+.contact-header{
+  font-size: 30px;
+  padding-bottom: 3%;
+}
+#success_msg{
+  color: #008000;
+  font-size: 20pt;
+}
