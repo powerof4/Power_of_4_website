@@ -1,3 +1,12 @@
+<?php
+	session_start();
+
+	// if session errors is set, assign $errors to session errors otherwise set $errors to empty array
+	$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+	$fields = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
+	$success = isset($_SESSION['success']) ? $_SESSION['success'] : "";
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,25 +53,36 @@
 <div class="cover-container">
     <div class="inner cover">
       <div class ="container form-background">
+				<!-- If success is not empty, display success message. -->
+				<?php if(!empty($success)): ?>
+						<div class="container">
+							<p id="success_msg"><?php echo $success; ?></p>
+						</div>
+					<?php endif; ?>
         <p class="contact-header">We'd Love To Hear From You!</p>
-          <form class="form-position">
+
+					<?php if(!empty($errors)): ?>
+						<div class="form_errors">
+							<!-- PHP function implode takes an array that takes an array to a string -->
+							<ul><li><?php echo implode('</li><li>', $errors); ?></li></ul>
+						</div>
+				  <?php endif; ?>
+
+          <form class="form-position" method="post" action="process.php">
             <div class="form-group row">
               <label for="name" class="col-form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name">
+							<!-- if the field is set with data, keep the data, if not, set it to blank -->
+              <input type="text" class="form-control" id="name" placeholder="Your Name" name="your_name" <?php echo isset($fields['name']) ? 'value="' . $fields['name'] . ' " ' : '' ?>>
             </div>
             <div class="form-group row">
               <label for="email" class= "col-form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email">
-            </div>
-             <div class="form-group row">
-              <label for="subject" class= "col-form-label">Subject</label>
-              <input type="text" class="form-control" id="email" placeholder="Subject">
+              <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" <?php echo isset($fields['email']) ? 'value="' . $fields['email'] . ' " ' : '' ?>>
             </div>
             <div class="form-group row">
               <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="5"></textarea>
+              <textarea class="form-control" id="message" rows="5" name="message" <?php echo isset($fields['message']) ? $fields['message'] : '' ?>></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
           </form>
       </div>
     </div>
@@ -70,3 +90,10 @@
 
 </body>
 </html>
+
+<?php
+	// Unset session errors to remove info user may have put in there before
+	unset($_SESSION['errors']);
+	unset($_SESSION['fields']);
+	unset($_SESSION['success']);
+ ?>
