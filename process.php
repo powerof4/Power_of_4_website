@@ -36,7 +36,7 @@
         // Connect to SMTP server
         $mail->Host = 'smtp.gmail.com';
         $mail->Username = 'powerof4devs@gmail.com';
-        $mail->Password = 'password'; // removed the password for our account
+        $mail->Password = 'LadiesWhoCode'; // removed the password for our account
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
